@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shubham Sawant — Portfolio</title>
+<meta name="description" content="Portfolio of Shubham Sawant — final-year Computer Engineering student building AI products: NLP, computer vision, RAG and real-time APIs.">
+<meta name="theme-color" content="#1478f0">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter:wght@400..800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+<!-- ============ LOADER ============ -->
+<div id="loader" aria-hidden="true">
+  <div class="ld-top mono"><span>INITIALIZING SYSTEM</span><span>SS / 2026</span></div>
+  <div class="ld-center">
+    <div class="ld-name"><span>SHUBHAM</span><span class="ld-light">SAWANT</span></div>
+    <div class="ld-count"><b id="ldNum">0</b><em>%</em></div>
+  </div>
+  <div class="ld-bot mono"><span>LOADING MODULES…</span><span class="ld-bar"><i id="ldBar"></i></span><span>SECURE CONNECTION</span></div>
+</div>
+
+<div id="progress"></div>
+<div class="cursor-ring" id="cRing"></div>
+<div class="cursor-dot" id="cDot"></div>
+<div class="toast" id="toast" role="status">Email copied</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#home" class="nav-logo" data-cursor aria-label="Home">SS<i>.</i></a>
+  <nav class="nav-links" id="navLinks" aria-label="Primary">
+    <span class="nav-pill" id="navPill"></span>
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#journey">Journey</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="nav-resume" href="assets/Shubham_Sawant_Resume.pdf" download="Shubham_Sawant_Resume.pdf">
+    <span>Resume</span>
+    <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3v10M5.5 9 10 13.5 14.5 9M4 17h12"/></svg>
+  </a>
+  <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-tilt" id="heroTilt">
+    <div class="hero-bg">
+      <i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i>
+      <span class="ring r1"></span><span class="ring r2"></span>
+    </div>
+
+    <div class="hero-copy">
+      <p class="hello mono"><span class="live-dot"></span>HI, I'M</p>
+      <h1 class="hero-title" id="heroTitle" aria-label="Shubham Sawant">
+        <span class="line" data-split>SHUBHAM</span>
+        <span class="line" data-split>SAWANT</span>
+      </h1>
+      <p class="role mono"><span class="role-fixed">( </span><span class="role-swap" id="roleSwap">AI / ML ENGINEER</span><span class="role-fixed"> )</span></p>
+      <p class="hero-sub">I build AI-powered products — NLP, computer vision and real-time APIs. Final-year Computer Engineering student from Mumbai, leading student tech teams.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-dark" data-cursor>View my work
+          <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15 15 5M7 5h8v8"/></svg></a>
+        <a href="#contact" class="btn btn-peach" data-cursor><span class="play"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M3 1.5v9l7.5-4.5z" fill="currentColor"/></svg></span>Contact me</a>
+      </div>
+    </div>
+
+    <!-- cursor-following 3D-feel character -->
+    <div class="stage-wrap" id="stageWrap">
+      <div class="stage" id="stage" aria-label="Cartoon portrait of Shubham that follows your cursor" role="img">
+        <img class="st-body" id="stBody" src="assets/body.webp" alt="" draggable="false">
+        <div class="st-head" id="stHead">
+          <img class="st-head-img" id="stHeadImg" src="assets/head.webp" alt="" draggable="false">
+          <canvas id="headGL"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <a href="#projects" class="badge" data-cursor aria-label="Explore my work">
+      <svg class="badge-text" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+        <text><textPath href="#circ" startOffset="0">EXPLORE MY WORK • EXPLORE MY WORK • EXPLORE MY WORK • </textPath></text>
+      </svg>
+      <span class="badge-core"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M5 13l7 7 7-7"/></svg></span>
+    </a>
+
+    <div class="glass-cards">
+      <a class="glass" href="#journey" data-cursor>
+        <span class="g-ico">🏆</span>
+        <span class="g-txt"><small class="mono">ACHIEVEMENT</small><b>1st place · Chandigarh Univ. Hackathon</b></span>
+        <span class="g-go">GO</span>
+      </a>
+      <a class="glass" href="#projects" data-cursor>
+        <span class="g-ico">🚀</span>
+        <span class="g-txt"><small class="mono">FINALIST</small><b>HackOrbit 2025 · Project Kisan</b></span>
+        <span class="g-go">GO</span>
+      </a>
+    </div>
+    <p class="scroll-hint mono">SCROLL <i></i></p>
+  </div>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>OPEN TO INTERNSHIPS</span><i>✦</i><span>AI / ML</span><i>✦</i><span>FULL-STACK</span><i>✦</i><span>COMPUTER VISION</span><i>✦</i><span>HACKATHON WINNER</span><i>✦</i><span>TEAM LEADER</span><i>✦</i>
+    <span>OPEN TO INTERNSHIPS</span><i>✦</i><span>AI / ML</span><i>✦</i><span>FULL-STACK</span><i>✦</i><span>COMPUTER VISION</span><i>✦</i><span>HACKATHON WINNER</span><i>✦</i><span>TEAM LEADER</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-media" data-reveal>
+      <div class="photo-card tilt" data-tilt>
+        <img src="assets/me.webp" alt="Shubham Sawant, portrait" loading="lazy" width="1000" height="1000">
+        <span class="photo-tag mono"><span class="live-dot"></span>OPEN TO OPPORTUNITIES</span>
+      </div>
+      <div class="sticker" aria-hidden="true"><img src="assets/head-sm.webp" alt=""><span class="mono">ALSO ME</span></div>
+    </div>
+
+    <div class="about-copy">
+      <p class="eyebrow mono" data-reveal>( 01 — ABOUT ME )</p>
+      <h2 class="h2" data-split>HI, I'M SHUBHAM.</h2>
+      <p class="lead" data-reveal>Final-year Computer Engineering student at St. John College of Engineering and Management, Palghar — turning AI research ideas into products people can actually use.</p>
+      <p data-reveal>I work across NLP and transformer models, computer vision, retrieval-augmented systems and API-driven back-ends, with React and Flutter on the front. Beyond code, I serve as <b>Technical Joint Head of SPCA</b> and have co-headed a PR team — so I'm as comfortable coordinating people and events as I am shipping models.</p>
+      <p data-reveal>Hackathons are where I learn fastest: <b>1st place</b> at the Chandigarh University Hackathon / Startup Challenge and a <b>finalist</b> at HackOrbit 2025.</p>
+
+      <div class="stats" data-reveal>
+        <div class="stat"><b data-count="8.6" data-dec="1">0</b><span class="mono">CGPA</span></div>
+        <div class="stat"><b data-count="7">0</b><span class="mono">PROJECTS</span></div>
+        <div class="stat"><b data-count="6">0</b><span class="mono">CERTIFICATES</span></div>
+        <div class="stat"><b data-count="1" data-suffix="st">0</b><span class="mono">HACKATHON</span></div>
+      </div>
+      <div class="chips" data-reveal><span>📍 Mumbai, India</span><span>🗣 English · Hindi · Marathi</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="sec skills" id="skills">
+  <div class="wrap">
+    <p class="eyebrow mono light" data-reveal>( 02 — TECH STACK )</p>
+    <h2 class="h2 light" data-split>TECHNOLOGIES I WORK WITH</h2>
+  </div>
+  <div class="mq" aria-hidden="true">
+    <div class="mq-row" id="mqA"></div>
+    <div class="mq-row rev" id="mqB"></div>
+  </div>
+  <div class="wrap">
+    <div class="skill-grid" id="skillGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="sec projects" id="projects">
+  <div class="wrap">
+    <p class="eyebrow mono light" data-reveal>( 03 — SELECTED WORK )</p>
+    <h2 class="h2 light" data-split>FEATURED PROJECTS</h2>
+    <div class="proj-grid" id="projGrid"></div>
+    <div class="proj-more" data-reveal>
+      <a class="btn btn-peach" href="https://github.com/ShubVerse-beep" target="_blank" rel="noopener" data-cursor>More on GitHub
+        <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15 15 5M7 5h8v8"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section class="sec journey" id="journey">
+  <div class="wrap">
+    <p class="eyebrow mono" data-reveal>( 04 — JOURNEY )</p>
+    <h2 class="h2" data-split>EDUCATION & EXPERIENCE</h2>
+    <ol class="timeline" id="timeline"></ol>
+    <h3 class="h3" data-reveal>Certifications</h3>
+    <div class="chips certs" id="certs" data-reveal></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec contact" id="contact">
+  <div class="contact-bg" aria-hidden="true">SHUBHAM</div>
+  <div class="wrap">
+    <p class="eyebrow mono light" data-reveal>( 05 — CONTACT )</p>
+    <h2 class="h2 huge light" data-split>LET'S WORK TOGETHER</h2>
+    <div class="contact-grid">
+      <div class="contact-info" data-reveal>
+        <p class="lead light">Looking for an intern or collaborator who ships AI products and keeps teams moving? My inbox is open.</p>
+        <button class="btn btn-dark big" id="copyMail" data-cursor type="button">shubhamsawant2205@gmail.com
+          <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="9" height="9" rx="2"/><path d="M13 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/></svg></button>
+        <ul class="socials">
+          <li><a href="https://github.com/ShubVerse-beep" target="_blank" rel="noopener" data-cursor>GitHub <span>↗</span></a></li>
+          <li><a href="https://linkedin.com/in/shub2205" target="_blank" rel="noopener" data-cursor>LinkedIn <span>↗</span></a></li>
+          <li><a href="tel:+918847710196" data-cursor>+91 88477 10196 <span>↗</span></a></li>
+          <li><a href="assets/Shubham_Sawant_Resume.pdf" download data-cursor>Download résumé <span>↓</span></a></li>
+        </ul>
+      </div>
+      <form class="form glass-dark" id="contactForm" data-reveal>
+        <label><span class="mono">YOUR NAME</span><input name="name" required autocomplete="name" placeholder="Jane Doe"></label>
+        <label><span class="mono">YOUR EMAIL</span><input name="email" type="email" required autocomplete="email" placeholder="jane@company.com"></label>
+        <label><span class="mono">MESSAGE</span><textarea name="msg" rows="4" required placeholder="Tell me about the role or project…"></textarea></label>
+        <button class="btn btn-peach big" type="submit" data-cursor>Send message
+          <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 17 3l-4 14-3-6z"/></svg></button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <span>© 2026 Shubham Sawant</span>
+  <span class="mono">DESIGNED & BUILT WITH HTML · CSS · WEBGL</span>
+  <a href="#home" data-cursor>Back to top ↑</a>
+</footer>
+
+<script src="js/assets-inline.js"></script>
+<script src="js/data.js"></script>
+<script src="js/character.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
