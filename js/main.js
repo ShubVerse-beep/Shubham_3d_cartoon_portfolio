@@ -17,7 +17,7 @@
     txt.split(/(\s+)/).forEach(function (part) {
       if (/^\s+$/.test(part)) { el.appendChild(document.createTextNode(' ')); return; }
       if (!part) return;
-      var w = document.createElement('span'); w.className = 'w'; w.setAttribute('aria-hidden', 'true');
+      var w = document.createElement('span'); w.className = 'w'; w.style.whiteSpace = 'nowrap'; w.setAttribute('aria-hidden', 'true');
       part.split('').forEach(function (ch) {
         var s = document.createElement('span'); s.className = 'ch'; s.style.setProperty('--i', i++); s.textContent = ch; w.appendChild(s);
       });
